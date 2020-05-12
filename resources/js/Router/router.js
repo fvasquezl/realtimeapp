@@ -4,8 +4,8 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 
-import welcome from '../js/views/welcome/welcome';
-import posts from '../js/views/posts/posts';
+import login from '../components/login/Login';
+import signUp from '../components/login/SignUp';
 
 const routes = [{
     path: '/login',
@@ -13,10 +13,10 @@ const routes = [{
     props: true,
     component: login
 },{
-    path: '/welcome',
-    name: 'welcome',
+    path: '/signUp',
+    name: 'signUp',
     props: true,
-    component: welcome
+    component: signUp
 }];
 
 const router = new VueRouter({
