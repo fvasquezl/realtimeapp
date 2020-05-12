@@ -2040,17 +2040,9 @@ __webpack_require__.r(__webpack_exports__);
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/login/SignUp.vue?vue&type=script&lang=js& ***!
   \***********************************************************************************************************************************************************************/
 /*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
-//
-//
-/* harmony default export */ __webpack_exports__["default"] = ({});
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /home/fvasquez/Code/realtimeApp/resources/js/components/login/SignUp.vue: Unexpected token (57:23)\n\n\u001b[0m \u001b[90m 55 | \u001b[39m        signup(){\u001b[0m\n\u001b[0m \u001b[90m 56 | \u001b[39m            axios\u001b[33m.\u001b[39mpost(\u001b[32m'/api/auth/signup'\u001b[39m\u001b[33m,\u001b[39m\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mform)\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 57 | \u001b[39m            \u001b[33m.\u001b[39mthen(res\u001b[33m=>\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m    | \u001b[39m                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 58 | \u001b[39m        }\u001b[0m\n\u001b[0m \u001b[90m 59 | \u001b[39m    }\u001b[0m\n\u001b[0m \u001b[90m 60 | \u001b[39m}\u001b[0m\n    at Parser._raise (/home/fvasquez/Code/realtimeApp/node_modules/@babel/parser/lib/index.js:742:17)\n    at Parser.raiseWithData (/home/fvasquez/Code/realtimeApp/node_modules/@babel/parser/lib/index.js:735:17)\n    at Parser.raise (/home/fvasquez/Code/realtimeApp/node_modules/@babel/parser/lib/index.js:729:17)\n    at Parser.unexpected (/home/fvasquez/Code/realtimeApp/node_modules/@babel/parser/lib/index.js:8779:16)\n    at Parser.parseExprAtom (/home/fvasquez/Code/realtimeApp/node_modules/@babel/parser/lib/index.js:10074:20)\n    at Parser.parseExprSubscripts (/home/fvasquez/Code/realtimeApp/node_modules/@babel/parser/lib/index.js:9624:23)\n    at Parser.parseMaybeUnary (/home/fvasquez/Code/realtimeApp/node_modules/@babel/parser/lib/index.js:9604:21)\n    at Parser.parseExprOps (/home/fvasquez/Code/realtimeApp/node_modules/@babel/parser/lib/index.js:9474:23)\n    at Parser.parseMaybeConditional (/home/fvasquez/Code/realtimeApp/node_modules/@babel/parser/lib/index.js:9447:23)\n    at Parser.parseMaybeAssign (/home/fvasquez/Code/realtimeApp/node_modules/@babel/parser/lib/index.js:9402:21)\n    at Parser.parseFunctionBody (/home/fvasquez/Code/realtimeApp/node_modules/@babel/parser/lib/index.js:10649:24)\n    at Parser.parseArrowExpression (/home/fvasquez/Code/realtimeApp/node_modules/@babel/parser/lib/index.js:10625:10)\n    at Parser.parseExprAtom (/home/fvasquez/Code/realtimeApp/node_modules/@babel/parser/lib/index.js:9922:18)\n    at Parser.parseExprSubscripts (/home/fvasquez/Code/realtimeApp/node_modules/@babel/parser/lib/index.js:9624:23)\n    at Parser.parseMaybeUnary (/home/fvasquez/Code/realtimeApp/node_modules/@babel/parser/lib/index.js:9604:21)\n    at Parser.parseExprOps (/home/fvasquez/Code/realtimeApp/node_modules/@babel/parser/lib/index.js:9474:23)\n    at Parser.parseMaybeConditional (/home/fvasquez/Code/realtimeApp/node_modules/@babel/parser/lib/index.js:9447:23)\n    at Parser.parseMaybeAssign (/home/fvasquez/Code/realtimeApp/node_modules/@babel/parser/lib/index.js:9402:21)\n    at Parser.parseExprListItem (/home/fvasquez/Code/realtimeApp/node_modules/@babel/parser/lib/index.js:10740:18)\n    at Parser.parseCallExpressionArguments (/home/fvasquez/Code/realtimeApp/node_modules/@babel/parser/lib/index.js:9812:22)\n    at Parser.parseSubscript (/home/fvasquez/Code/realtimeApp/node_modules/@babel/parser/lib/index.js:9718:31)\n    at Parser.parseSubscripts (/home/fvasquez/Code/realtimeApp/node_modules/@babel/parser/lib/index.js:9647:19)\n    at Parser.parseExprSubscripts (/home/fvasquez/Code/realtimeApp/node_modules/@babel/parser/lib/index.js:9630:17)\n    at Parser.parseMaybeUnary (/home/fvasquez/Code/realtimeApp/node_modules/@babel/parser/lib/index.js:9604:21)\n    at Parser.parseExprOps (/home/fvasquez/Code/realtimeApp/node_modules/@babel/parser/lib/index.js:9474:23)\n    at Parser.parseMaybeConditional (/home/fvasquez/Code/realtimeApp/node_modules/@babel/parser/lib/index.js:9447:23)\n    at Parser.parseMaybeAssign (/home/fvasquez/Code/realtimeApp/node_modules/@babel/parser/lib/index.js:9402:21)\n    at Parser.parseExpression (/home/fvasquez/Code/realtimeApp/node_modules/@babel/parser/lib/index.js:9354:23)\n    at Parser.parseStatementContent (/home/fvasquez/Code/realtimeApp/node_modules/@babel/parser/lib/index.js:11233:23)\n    at Parser.parseStatement (/home/fvasquez/Code/realtimeApp/node_modules/@babel/parser/lib/index.js:11104:17)\n    at Parser.parseBlockOrModuleBlockBody (/home/fvasquez/Code/realtimeApp/node_modules/@babel/parser/lib/index.js:11679:25)\n    at Parser.parseBlockBody (/home/fvasquez/Code/realtimeApp/node_modules/@babel/parser/lib/index.js:11665:10)\n    at Parser.parseBlock (/home/fvasquez/Code/realtimeApp/node_modules/@babel/parser/lib/index.js:11649:10)\n    at Parser.parseFunctionBody (/home/fvasquez/Code/realtimeApp/node_modules/@babel/parser/lib/index.js:10656:24)\n    at Parser.parseFunctionBodyAndFinish (/home/fvasquez/Code/realtimeApp/node_modules/@babel/parser/lib/index.js:10639:10)\n    at Parser.parseMethod (/home/fvasquez/Code/realtimeApp/node_modules/@babel/parser/lib/index.js:10601:10)");
 
 /***/ }),
 
@@ -37884,7 +37876,73 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [_vm._v("\nsignUp\n    ")])
+  return _c(
+    "v-container",
+    [
+      _c(
+        "v-form",
+        {
+          on: {
+            submit: function($event) {
+              $event.preventDefault()
+              return _vm.signup($event)
+            }
+          }
+        },
+        [
+          _c("v-text-field", {
+            attrs: { label: "Name", type: "text", required: "" },
+            model: {
+              value: _vm.form.name,
+              callback: function($$v) {
+                _vm.$set(_vm.form, "name", $$v)
+              },
+              expression: "form.name"
+            }
+          }),
+          _vm._v(" "),
+          _c("v-text-field", {
+            attrs: { label: "E-mail", type: "email", required: "" },
+            model: {
+              value: _vm.form.email,
+              callback: function($$v) {
+                _vm.$set(_vm.form, "email", $$v)
+              },
+              expression: "form.email"
+            }
+          }),
+          _vm._v(" "),
+          _c("v-text-field", {
+            attrs: { label: "Password", type: "password", required: "" },
+            model: {
+              value: _vm.form.password,
+              callback: function($$v) {
+                _vm.$set(_vm.form, "password", $$v)
+              },
+              expression: "form.password"
+            }
+          }),
+          _vm._v(" "),
+          _c("v-text-field", {
+            attrs: { label: "Password", type: "password", required: "" },
+            model: {
+              value: _vm.form.password_confirmation,
+              callback: function($$v) {
+                _vm.$set(_vm.form, "password_confirmation", $$v)
+              },
+              expression: "form.password_confirmation"
+            }
+          }),
+          _vm._v(" "),
+          _c("v-btn", { attrs: { color: "success", type: "submit" } }, [
+            _vm._v("\n            SignUp\n        ")
+          ])
+        ],
+        1
+      )
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
