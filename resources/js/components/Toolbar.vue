@@ -1,5 +1,5 @@
 <template>
-    <v-toolbar extended>
+    <v-toolbar>
         <v-toolbar-title>Fvasquez App</v-toolbar-title>
         <v-spacer></v-spacer>
         <div>
