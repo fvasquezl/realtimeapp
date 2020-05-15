@@ -9,6 +9,9 @@ import User from './Helpers/User'
 window.User = User
 window.EventBus = new Vue()
 
+import md from "marked";
+window.md = md
+
 Vue.component('AppHome',require('./components/AppHome').default);
 
 import router from './Router/router';

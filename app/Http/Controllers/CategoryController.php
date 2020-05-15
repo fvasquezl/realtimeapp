@@ -41,8 +41,7 @@ class CategoryController extends Controller
      */
     public function store(SaveCategoryRequest $request)
     {
-         $request->createCategory();
-
+        $request->createCategory();
         return response('Created', Response::HTTP_CREATED);
     }
 
