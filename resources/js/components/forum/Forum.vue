@@ -8,9 +8,7 @@
                 </question>
             </v-col>
             <v-col cols="6" md="4">
-                <v-card class="pa-2" outlined tile>
-                    .col-6 .col-md-4
-                </v-card>
+                <app-sidebar></app-sidebar>
             </v-col>
         </v-row>
     </v-container>
@@ -18,10 +16,10 @@
 
 <script>
     import question from "./question";
-
+    import AppSidebar from "./Sidebar"
     export default {
         components: {
-            question
+            question,AppSidebar
         },
         data() {
             return {

@@ -41,8 +41,8 @@ class CategoryController extends Controller
      */
     public function store(SaveCategoryRequest $request)
     {
-        $request->createCategory();
-        return response('Created', Response::HTTP_CREATED);
+        $category = $request->createCategory();
+        return response(new CategoryResource($category), Response::HTTP_CREATED);
     }
 
     /**
@@ -60,14 +60,14 @@ class CategoryController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param SaveCategoryRequest $request
      * @param Category $category
      * @return \Illuminate\Http\Response
      */
     public function update(SaveCategoryRequest $request, Category $category)
     {
-        $request->updateCategory($category);
-        return response('Updated', Response::HTTP_ACCEPTED);
+        $category =$request->updateCategory($category);
+        return response(new CategoryResource($category), Response::HTTP_ACCEPTED);
     }
 
     /**

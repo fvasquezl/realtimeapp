@@ -9,6 +9,7 @@ import SignUp from '../components/login/SignUp';
 import Forum from '../components/forum/Forum';
 import Read from '../components/forum/Read';
 import Create from '../components/forum/Create';
+import CreateCategory from '../components/category/CreateCategory';
 import Logout from '../components/login/Logout';
 
 const routes = [{
@@ -36,6 +37,11 @@ const routes = [{
     name: 'create',
     props: true,
     component: Create
+},{
+    path: '/category',
+    name: 'CreateCategory',
+    props: true,
+    component: CreateCategory
 },{
     path: '/logout',
     name: 'logout',
