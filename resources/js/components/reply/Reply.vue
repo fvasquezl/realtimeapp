@@ -4,6 +4,8 @@
             <v-list-item-content>
                 <v-list-item-title class="headline">{{data.user}}</v-list-item-title>
                 <v-list-item-subtitle>said {{data.created_at}}</v-list-item-subtitle>
+                <v-spacer></v-spacer>
+                <like></like>
             </v-list-item-content>
         </v-list-item>
         <v-divider></v-divider>
@@ -32,11 +34,12 @@
 
 <script>
     import EditReply from "./EditReply"
+    import Like from "./../likes/like"
 
     export default {
         props: ['data','index'],
         components:{
-            EditReply
+            EditReply,Like
         },
         data(){
             return{
