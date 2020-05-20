@@ -2,18 +2,21 @@
     <v-card class="mt-4">
         <v-list-item two-line>
             <v-list-item-content>
-                <v-list-item-title class="headline">{{data.user}}</v-list-item-title>
-                <v-list-item-subtitle>said {{data.created_at}}</v-list-item-subtitle>
-                <v-spacer></v-spacer>
-                <like></like>
+                <v-list-item-title class="headline">{{
+                    data.user
+                }}</v-list-item-title>
+                <v-list-item-subtitle
+                    >said {{ data.created_at }}</v-list-item-subtitle
+                >
             </v-list-item-content>
+
+            <v-spacer></v-spacer>
+
+            <like :content="data"></like>
         </v-list-item>
         <v-divider></v-divider>
 
-        <edit-reply
-            v-if="editing"
-            :reply = data
-        ></edit-reply>
+        <edit-reply v-if="editing" :reply="data"></edit-reply>
 
         <v-card-text v-else v-html="reply"></v-card-text>
 
@@ -33,52 +36,51 @@
 </template>
 
 <script>
-    import EditReply from "./EditReply"
-    import Like from "./../likes/like"
+import EditReply from "./EditReply";
+import Like from "./../likes/like";
 
-    export default {
-        props: ['data','index'],
-        components:{
-            EditReply,Like
+export default {
+    props: ["data", "index"],
+    components: {
+        EditReply,
+        Like
+    },
+    data() {
+        return {
+            editing: false,
+            beforeEditReplyBody: ""
+        };
+    },
+    computed: {
+        own() {
+            return User.own(this.data.user_id);
         },
-        data(){
-            return{
-                editing:false,
-                beforeEditReplyBody:''
-            }
+        reply() {
+            return md.parse(this.data.reply);
+        }
+    },
+    created() {
+        this.listen();
+    },
+    methods: {
+        edit() {
+            this.editing = true;
+            this.beforeEditReplyBody = this.data.reply;
         },
-        computed: {
-            own() {
-                return User.own(this.data.user_id)
-            },
-            reply(){
-                return md.parse(this.data.reply)
-            }
+        destroy() {
+            EventBus.$emit("deleteReply", this.index);
         },
-        created() {
-            this.listen()
-        },
-        methods:{
-            edit(){
-                this.editing =true;
-                this.beforeEditReplyBody = this.data.reply;
-            },
-            destroy(){
-                EventBus.$emit('deleteReply',this.index)
-            },
-            listen(){
-                EventBus.$on('cancelEditing',(reply)=>{
-                    this.editing = false
-                    if(reply !== this.data.reply){
-                        this.data.reply = this.beforeEditReplyBody
-                        this.beforeEditReplyBody =''
-                    }
-                })
-            }
+        listen() {
+            EventBus.$on("cancelEditing", reply => {
+                this.editing = false;
+                if (reply !== this.data.reply) {
+                    this.data.reply = this.beforeEditReplyBody;
+                    this.beforeEditReplyBody = "";
+                }
+            });
         }
     }
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
