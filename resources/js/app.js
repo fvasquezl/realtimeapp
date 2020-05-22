@@ -7,10 +7,14 @@ Vue.use(Vuetify)
 
 import User from './Helpers/User'
 window.User = User
-window.EventBus = new Vue()
+
+import Exception from './Helpers/Exception'
+window.Exception = Exception
 
 import md from "marked";
 window.md = md
+
+window.EventBus = new Vue()
 
 Vue.component('AppHome',require('./components/AppHome').default);
 

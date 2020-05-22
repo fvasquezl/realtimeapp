@@ -5,7 +5,7 @@
                 <div class="title">{{ data.title }}</div>
             </div>
             <v-spacer></v-spacer>
-            <v-btn color="teal" dark>{{data.reply_count}} Replies</v-btn>
+            <v-btn color="teal" dark>{{ replyCount }} Replies</v-btn>
         </v-card-title>
 
         <v-card-subtitle>
@@ -29,13 +29,31 @@ export default {
     props: ["data"],
     data() {
         return {
-            own: User.own(this.data.user_id)
+            own: User.own(this.data.user_id),
+            replyCount: this.data.reply_count
         };
     },
     computed: {
         body() {
             return md.parse(this.data.body);
         }
+    },
+    created() {
+        EventBus.$on("newReply", () => {
+            this.replyCount++;
+        });
+
+        Echo.private("App.User." + User.id()).notification(notification => {
+            this.replyCount++;
+        });
+
+        EventBus.$on("deleteReply", () => {
+            this.replyCount--;
+        });
+        Echo.channel("deleteReplyChannel").listen("DeleteReplyEvent", e => {
+          this.replyCount--;
+      });
+
     },
     methods: {
         destroy() {
@@ -45,7 +63,7 @@ export default {
                 .catch(error => console.log(error.response.data));
         },
         edit() {
-           EventBus.$emit("startEditing");
+            EventBus.$emit("startEditing");
         }
     }
 };
