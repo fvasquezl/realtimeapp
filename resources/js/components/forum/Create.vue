@@ -7,6 +7,9 @@
                 type="text"
                 required
             ></v-text-field>
+            <span v-if="errors.title" class="red--text">{{
+                errors.title[0]
+            }}</span>
 
             <v-autocomplete
                 v-model="form.category_id"
@@ -17,11 +20,20 @@
                 label="Category"
             ></v-autocomplete>
 
-            <vue-simplemde v-model="form.body" />
+            <span v-if="errors.title" class="red--text">{{
+                errors.title[0]
+            }}</span>
 
-            <v-btn color="success" type="submit">
-                Create
-            </v-btn>
+            <vue-simplemde v-model="form.body" />
+            <span v-if="errors.title" class="red--text">{{
+                errors.title[0]
+            }}</span>
+
+            <div>
+                <v-btn color="success" type="submit" :disabled="disabled">
+                    Create
+                </v-btn>
+            </div>
         </v-form>
     </v-container>
 </template>
@@ -44,9 +56,6 @@ export default {
         };
     },
     created() {
-        const say = ifname => {
-            console.log("yes");
-        };
         axios
             .get("/api/category")
             .then(res => (this.categories = res.data.data))
@@ -57,7 +66,12 @@ export default {
             axios
                 .post("/api/question", this.form)
                 .then(res => this.$router.push(res.data.path))
-                .catch(error => (this.errors = error.response.data.error));
+                .catch(error => (this.errors = error.response.data.errors));
+        }
+    },
+    computed: {
+        disabled() {
+            return !(this.form.title && this.form.body && this.form.category_id)
         }
     }
 };
